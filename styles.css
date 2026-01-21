@@ -1,0 +1,199 @@
+/* styles.css
+   Goal: match screenshot.png as closely as possible.
+   Main ideas:
+   - Light gray page background
+   - Big blue header with centered white text
+   - Centered white content blocks
+   - “Quiz” section in light blue box + image floated right
+   - Table with gray header row and consistent borders
+   - Gray footer bar
+*/
+
+/* ---------- Base page setup ---------- */
+* {
+  box-sizing: border-box; /* makes padding/borders predictable */
+}
+
+body {
+  margin: 0;
+  background: #eeeeee; /* screenshot has a light gray surrounding background */
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  line-height: 1.4;
+}
+
+/* ---------- Header ---------- */
+#header {
+  background: #0b66d8; /* strong blue like screenshot */
+  color: #fff;
+  text-align: center;
+  padding: 28px 16px 22px;
+}
+
+/* Big title */
+#header h1 {
+  margin: 0;
+  font-size: 44px; /* close to screenshot */
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* Subtitle: italic + smaller */
+#header p {
+  margin: 6px 0 0;
+  font-style: italic;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+/* ---------- Main white content block ---------- */
+#main-content {
+  background: #ffffff;
+  width: min(980px, 92%);
+  margin: 22px auto;
+  padding: 22px 26px;
+}
+
+/* Headings (uppercased like screenshot for the larger ones) */
+#main-content h2 {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  font-size: 26px;
+  letter-spacing: 0.3px;
+}
+
+#main-content h3 {
+  margin: 10px 0 8px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+/* Smaller section headings */
+#main-content h4 {
+  margin: 18px 0 6px;
+  font-size: 16px;
+}
+
+#main-content h5 {
+  margin: 18px 0 6px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#main-content h6 {
+  margin: 18px 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Lists spacing */
+#main-content ul,
+#main-content ol {
+  margin: 8px 0 14px 22px;
+}
+
+/* Highlighted word “mantle” in red (screenshot shows red emphasis) */
+.important {
+  color: #e53b2f;
+  font-weight: 700;
+}
+
+/* Links: keep classic blue + underline like screenshot */
+a {
+  color: #0b52ff;
+  text-decoration: underline;
+}
+
+/* ---------- Quiz section (light blue box) ---------- */
+#quiz-section {
+  margin-top: 18px;
+  background: #dff3ff;           /* pale blue */
+  border: 1px solid #b6d8ea;     /* subtle border */
+  padding: 18px;
+}
+
+/* Quiz heading (inside the quiz) */
+#quiz-section h2 {
+  margin-top: 0;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+/* Image on the right with purple-ish border like screenshot */
+#quiz-section img {
+  float: right;                  /* key: places image to the right */
+  margin-left: 16px;
+  border: 3px solid #6a3cff;     /* purple border */
+  padding: 2px;
+  background: #0000;             /* transparent background */
+}
+
+/* Form spacing to look like screenshot */
+#quiz-section label {
+  display: inline-block;
+  margin: 8px 0 4px;
+  font-size: 14px;
+}
+
+#quiz-section input[type="text"] {
+  width: 180px;
+  height: 22px;
+  margin-left: 8px;
+}
+
+/* Submit button */
+#quiz-section input[type="submit"] {
+  margin-top: 10px;
+  padding: 4px 10px;
+  font-size: 13px;
+  border: 1px solid #888;
+  background: #efefef;
+  cursor: pointer;
+}
+
+/* The <br> tags in the HTML create the line breaks,
+   so the CSS just tightens the overall look slightly. */
+
+
+/* ---------- Species table section ---------- */
+#species-table {
+  background: #ffffff;
+  width: min(980px, 92%);
+  margin: 0 auto 18px;
+  padding: 0 26px 24px;
+}
+
+/* Table title */
+#species-table h2 {
+  margin: 0;
+  padding-top: 14px;
+  font-size: 26px;
+}
+
+/* Table styling: match screenshot’s strong borders and gray header row */
+#species-table table {
+  margin-top: 10px;
+  border-collapse: collapse; /* makes borders look like a grid */
+  width: 360px;             /* screenshot shows a smaller table, not full width */
+}
+
+#species-table th,
+#species-table td {
+  border: 2px solid #555;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+#species-table th {
+  background: #7a7a7a;
+  color: #fff;
+  text-align: left;
+}
+
+/* ---------- Footer ---------- */
+#footer {
+  background: #bdbdbd; /* gray bar like screenshot */
+  text-align: center;
+  padding: 14px 12px;
+  font-size: 13px;
+}
